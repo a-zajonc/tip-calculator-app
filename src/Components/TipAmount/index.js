@@ -4,7 +4,7 @@ export function TipAmount() {
     return  <Box  fontFamily="Space Mono" display="flex" flexDirection="row" height="46px">
   <Box w="50%">
   <Text fontSize="17px" color="white">Tip Amount</Text>
-        <Text fontSize="14px" color="#F4FAFA">/ person </Text>
+        <Text fontSize="14px" color="#7F9C9F">/ person </Text>
     </Box>
   <Box w="50%" display="flex" flexDirection="row" alignItems="center">
   <Img src="icon-dollar-green.svg" alt="Dollar sign" height="40px"/>

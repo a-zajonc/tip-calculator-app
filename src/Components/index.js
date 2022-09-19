@@ -13,7 +13,7 @@ export function SplitterComponent() {
 <TipSelect/>
 <PeopleNumberInput/>
 </Box>
-<Box bgColor="#00494D" width="50%" m="20px" borderRadius="20px" p="20px" display="flex" flexDirection="column" justifyContent="space-between">
+<Box bgColor="#00494D" width="50%" m="20px" borderRadius="20px" p="40px" display="flex" flexDirection="column" justifyContent="space-between">
 <TipAmount/>
 <TotalAmount/>
 <ResetButton/>
