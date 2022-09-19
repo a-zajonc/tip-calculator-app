@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
 
 export function TipAmount() {
-    return <Box>Tip Amount</Box>
+    return <Box fontFamily="Space Mono">Tip Amount</Box>
 }
