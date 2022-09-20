@@ -3,10 +3,15 @@ export function TotalAmountCalculator({bill, tipPercentage}) {
     return bill 
     }
     else {
-        return bill * parseFloat(tipPercentage) / 100
+        return (Number(bill) + Number(bill * parseFloat(tipPercentage) / 100))
     }
 }
 
-export function TipAmount({bill, tipPercentage}) {
-    return bill * tipPercentage
+export function TipAmountCalculator({bill, tipPercentage}) {
+    if (!tipPercentage || !bill) {
+        return "0.00"
+    }
+    else {
+    return (bill * parseFloat(tipPercentage) / 100)
+    }
 }  
