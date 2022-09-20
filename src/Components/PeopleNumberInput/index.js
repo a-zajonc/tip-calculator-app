@@ -16,7 +16,7 @@ export function PeopleNumberInput({setPeopleNumber}) {
       pointerEvents='none'
       children={personSign}
     />
-        <Input variant="filled" color="#7F9C9F"
+        <Input variant="filled" color="#00494D" 
 _placeholder={{ opacity: 0.4}} focusBorderColor="#26C0AB"
         backgroundColor="#F4FAFA"  fontSize="24px" placeholder="0" textAlign="end"
         onChange={handleChange}
