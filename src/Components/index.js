@@ -27,7 +27,7 @@ export function SplitterComponent() {
 <Box bgColor="#00494D" width="50%" m="20px" borderRadius="20px" p="40px" display="flex" flexDirection="column" justifyContent="space-between">
 <TipAmount total={totalTip} bill={bill} tipPercentage={tipPercentage}/>
 <TotalAmount total={totalResult}/>
-<ResetButton/>
+<ResetButton  bill={bill} tipPercentage={tipPercentage} peopleNumber={peopleNumber}/>
 </Box>
     </Box>
 }
