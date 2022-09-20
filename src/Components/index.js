@@ -8,7 +8,7 @@ import { TotalAmount } from "./TotalAmount"
 
 export function SplitterComponent() {
     return <Box width="850px" bgColor="white" display="flex" flexDirection="row" height="400px" p="0" borderRadius="20px">
-        <Box width="50%" m="20px" p="20px">
+        <Box width="50%" m="20px" p="20px" display="flex" flexDirection="column" justifyContent="space-between">
 <BillInput/>
 <TipSelect/>
 <PeopleNumberInput/>
