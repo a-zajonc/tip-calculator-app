@@ -44,7 +44,12 @@ export function SplitterComponent() {
           setTipPercentage={setTipPercentage}
           tipPercentage={tipPercentage}
         />
-        <PeopleNumberInput setPeopleNumber={setPeopleNumber} bill={bill} tipPercentage={tipPercentage} peopleNumber={peopleNumber}/>
+        <PeopleNumberInput
+          setPeopleNumber={setPeopleNumber}
+          bill={bill}
+          tipPercentage={tipPercentage}
+          peopleNumber={peopleNumber}
+        />
       </Box>
       <Box
         bgColor="#00494D"
