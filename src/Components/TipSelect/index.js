@@ -65,6 +65,7 @@ export function TipSelect({ setTipPercentage, tipPercentage }) {
           textAlign="end"
           _placeholder={{ color: "#7F9C9F" }}
           onChange={handleChange}
+          type="number"
         />
       </ButtonGroup>
     </Box>
