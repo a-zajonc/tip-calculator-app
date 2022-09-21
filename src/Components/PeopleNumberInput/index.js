@@ -51,6 +51,7 @@ export function PeopleNumberInput({
           textAlign="end"
           onChange={handleChange}
           isInvalid={!isError ? false : true}
+          type="number"
         />
       </InputGroup>
     </Box>

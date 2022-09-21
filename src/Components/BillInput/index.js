@@ -34,6 +34,7 @@ export function BillInput({ setBill }) {
           placeholder="0"
           textAlign="end"
           onChange={handleChange}
+          type="number"
         />
       </InputGroup>
     </Box>
