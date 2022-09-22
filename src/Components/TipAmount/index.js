@@ -10,11 +10,11 @@ export function TipAmount({ total }) {
       height="46px"
     >
       <Box w="33%">
-        <Text fontSize="15px" color="white">
+        <Text fontSize={{ base: "13px", md: "15px", lg: "15px" }} color="white">
           Tip Amount
         </Text>
         <Text fontSize="12px" color="#7F9C9F">
-          / person{" "}
+          / person
         </Text>
       </Box>
       <Box
@@ -25,7 +25,14 @@ export function TipAmount({ total }) {
         justifyContent="flex-end"
       >
         <Img src="icon-dollar-green.svg" alt="Dollar sign" height="30px" />
-        <Text color="#20A291" fontSize={resultDisplaySize(total)}>
+        <Text
+          color="#20A291"
+          fontSize={{
+            base: "26px",
+            md: resultDisplaySize(total),
+            lg: resultDisplaySize(total),
+          }}
+        >
           {!total ? "0.00" : total}
         </Text>
       </Box>

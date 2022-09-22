@@ -23,11 +23,11 @@ export function SplitterComponent() {
 
   return (
     <Box
-      width={{ base: "500px", lg: "850px" }}
+      width={{ base: "375px", md: "500px", lg: "850px" }}
       bgColor="white"
       display="flex"
       flexDirection={{ base: "column", lg: "row" }}
-      height={{ base: "650px", lg: "400px" }}
+      height={{ base: "600px", md: "650px", lg: "400px" }}
       p="0"
       borderRadius="20px"
     >
