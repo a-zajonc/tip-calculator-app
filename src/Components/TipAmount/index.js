@@ -1,4 +1,5 @@
 import { Box, Text, Img } from "@chakra-ui/react";
+import { resultDisplaySize } from "../TipCalculatorFunctions";
 
 export function TipAmount({ total }) {
   return (
@@ -8,17 +9,23 @@ export function TipAmount({ total }) {
       flexDirection="row"
       height="46px"
     >
-      <Box w="50%">
-        <Text fontSize="17px" color="white">
+      <Box w="33%">
+        <Text fontSize="15px" color="white">
           Tip Amount
         </Text>
-        <Text fontSize="14px" color="#7F9C9F">
+        <Text fontSize="12px" color="#7F9C9F">
           / person{" "}
         </Text>
       </Box>
-      <Box w="50%" display="flex" flexDirection="row" alignItems="center">
-        <Img src="icon-dollar-green.svg" alt="Dollar sign" height="40px" />
-        <Text fontSize="46px" color="#20A291">
+      <Box
+        w="66%"
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="flex-end"
+      >
+        <Img src="icon-dollar-green.svg" alt="Dollar sign" height="30px" />
+        <Text color="#20A291" fontSize={resultDisplaySize(total)}>
           {!total ? "0.00" : total}
         </Text>
       </Box>

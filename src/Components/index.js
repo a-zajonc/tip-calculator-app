@@ -6,8 +6,8 @@ import { TipAmount } from "./TipAmount";
 import { TipSelect } from "./TipSelect";
 import { TotalAmount } from "./TotalAmount";
 import { useState } from "react";
-import { TotalAmountCalculator } from "./TipCalculator";
-import { TipAmountCalculator } from "./TipCalculator";
+import { TotalAmountCalculator } from "./TipCalculatorFunctions";
+import { TipAmountCalculator } from "./TipCalculatorFunctions";
 
 export function SplitterComponent() {
   const [bill, setBill] = useState("");
@@ -61,13 +61,20 @@ export function SplitterComponent() {
         flexDirection="column"
         justifyContent="space-between"
       >
-        <TipAmount
-          total={totalTip}
-          bill={bill}
-          tipPercentage={tipPercentage}
-          peopleNumber={peopleNumber}
-        />
-        <TotalAmount total={totalResult} />
+        <Box
+          display="flex"
+          flexDirection="column"
+          height="50%"
+          justifyContent="space-around"
+        >
+          <TipAmount
+            total={totalTip}
+            bill={bill}
+            tipPercentage={tipPercentage}
+            peopleNumber={peopleNumber}
+          />
+          <TotalAmount total={totalResult} />
+        </Box>
         <ResetButton
           bill={bill}
           tipPercentage={tipPercentage}
