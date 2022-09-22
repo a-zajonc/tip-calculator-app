@@ -23,21 +23,23 @@ export function SplitterComponent() {
 
   return (
     <Box
-      width="850px"
+      width={{ base: "500px", lg: "850px" }}
       bgColor="white"
       display="flex"
-      flexDirection="row"
-      height="400px"
+      flexDirection={{ base: "column", lg: "row" }}
+      height={{ base: "650px", lg: "400px" }}
       p="0"
       borderRadius="20px"
     >
       <Box
-        width="50%"
+        width={{ lg: "50%" }}
+        height={{ base: "60%", lg: "initial" }}
         m="20px"
         p="20px"
         display="flex"
         flexDirection="column"
         justifyContent="space-between"
+        pb={{ base: "0", lg: "20px" }}
       >
         <BillInput setBill={setBill} />
         <TipSelect
@@ -53,7 +55,8 @@ export function SplitterComponent() {
       </Box>
       <Box
         bgColor="#00494D"
-        width="50%"
+        width={{ lg: "50%" }}
+        height={{ base: "40%", lg: "initial" }}
         m="20px"
         borderRadius="20px"
         p="40px"
