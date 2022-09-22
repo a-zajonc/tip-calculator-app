@@ -1,10 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { extendTheme } from "@chakra-ui/react";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const breakpoints = {
+  sm: "320px",
+  md: "505px",
+  lg: "900px",
+  xl: "1200px",
+  "2xl": "1536px",
+};
+
+export const theme = extendTheme({ breakpoints });
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

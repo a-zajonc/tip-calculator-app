@@ -15,6 +15,12 @@ export function TipAmountCalculator({ bill, tipPercentage, peopleNumber }) {
 
 export const resultDisplaySize = (total) => {
   switch (total.length) {
+    case 13:
+      return "22px";
+    case 12:
+      return "24px";
+    case 11:
+      return "26px";
     case 10:
       return "28px";
     case 9:
