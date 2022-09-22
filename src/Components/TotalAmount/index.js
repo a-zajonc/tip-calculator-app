@@ -25,7 +25,14 @@ export function TotalAmount({ total }) {
         justifyContent="flex-end"
       >
         <Img src="icon-dollar-green.svg" alt="Dollar sign" height="30px" />
-        <Text fontSize={resultDisplaySize(total)} color="#20A291">
+        <Text
+          fontSize={{
+            base: "26px",
+            md: resultDisplaySize(total),
+            lg: resultDisplaySize(total),
+          }}
+          color="#20A291"
+        >
           {!total ? "0.00" : total}
         </Text>
       </Box>

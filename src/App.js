@@ -10,7 +10,11 @@ function App() {
         bgColor="#C5E4E7"
         height="100vh"
         display="flex"
-        justifyContent={{ base: "space-around", lg: "space-evenly" }}
+        justifyContent={{
+          base: "space-around",
+          lg: "space-evenly",
+          md: "space-evenly",
+        }}
         alignItems="center"
         flexDirection="column"
       >
