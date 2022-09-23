@@ -18,7 +18,8 @@ export function PeopleNumberInput({
     setPeopleNumber(event.target.value);
   };
 
-  const isError = tipPercentage && bill && !peopleNumber;
+  const isError =
+    (tipPercentage && bill && !peopleNumber) || peopleNumber === "0";
 
   return (
     <Box fontFamily="Space Mono">
