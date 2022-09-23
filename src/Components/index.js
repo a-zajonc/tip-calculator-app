@@ -27,7 +27,7 @@ export function SplitterComponent() {
       bgColor="white"
       display="flex"
       flexDirection={{ base: "column", lg: "row" }}
-      height={{ base: "600px", md: "650px", lg: "400px" }}
+      height={{ base: "fit-content", md: "650px", lg: "400px" }}
       p="0"
       borderRadius="20px"
     >
