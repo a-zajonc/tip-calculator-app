@@ -78,6 +78,7 @@ export function TipSelect({ setTipPercentage, tipPercentage }) {
           onChange={handleChange}
           type="number"
           value={tipPercentage}
+          min={1}
         />
       </Container>
     </Box>

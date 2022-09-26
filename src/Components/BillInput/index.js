@@ -36,6 +36,7 @@ export function BillInput({ setBill, bill }) {
           onChange={handleChange}
           type="number"
           value={bill}
+          min={1}
         />
       </InputGroup>
     </Box>
