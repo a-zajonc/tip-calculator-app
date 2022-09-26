@@ -17,7 +17,6 @@ export function TipAmountCalculator({ bill, tipPercentage, peopleNumber }) {
     100 /
     peopleNumber
   ).toFixed(2);
-  console.log(typeof totalAmount);
   if (!tipPercentage || !bill || !peopleNumber) {
     return "0.00";
   } else {
