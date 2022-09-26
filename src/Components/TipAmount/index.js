@@ -1,6 +1,5 @@
 import { Box, Text, Img } from "@chakra-ui/react";
-import { resultDisplaySize } from "../TipCalculatorFunctions";
-import { greenDollar } from "../Images";
+import greenDollar from "../Images/icon-dollar-green.png";
 
 export function TipAmount({ total }) {
   return (

@@ -1,6 +1,5 @@
 import { Box, Text, Img } from "@chakra-ui/react";
-import { resultDisplaySize } from "../TipCalculatorFunctions";
-import { greenDollar } from "../Images";
+import greenDollar from "../Images/icon-dollar-green.png";
 
 export function TotalAmount({ total }) {
   return (
@@ -27,7 +26,7 @@ export function TotalAmount({ total }) {
       >
         <Img
           src={greenDollar}
-          alt="Dollar sign"
+          alt="Green Dollar sign"
           height={{ base: "20px", md: "30px", lg: "30px" }}
         />
         <Text

@@ -6,7 +6,7 @@ import {
   InputLeftElement,
   Text,
 } from "@chakra-ui/react";
-import { personSign } from "../Images";
+import { PersonSign } from "../Images/PersonSign";
 
 export function PeopleNumberInput({
   setPeopleNumber,
@@ -39,7 +39,7 @@ export function PeopleNumberInput({
         ) : null}
       </Box>
       <InputGroup>
-        <InputLeftElement pointerEvents="none">{personSign}</InputLeftElement>
+        <InputLeftElement pointerEvents="none">{PersonSign}</InputLeftElement>
         <Input
           variant="filled"
           color="#00494D"

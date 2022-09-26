@@ -5,7 +5,7 @@ import {
   InputGroup,
   InputLeftElement,
 } from "@chakra-ui/react";
-import { dollarSign } from "../Images";
+import { DollarSign } from "../Images/DollarSign";
 
 export function BillInput({ setBill, bill }) {
   const handleChange = (event) => {
@@ -23,7 +23,9 @@ export function BillInput({ setBill, bill }) {
         Bill
       </Heading>
       <InputGroup>
-        <InputLeftElement pointerEvents="none">{dollarSign}</InputLeftElement>
+        <InputLeftElement pointerEvents="none">
+          <DollarSign color="#9EBBBD" />
+        </InputLeftElement>
         <Input
           variant="filled"
           color="#00494D"
