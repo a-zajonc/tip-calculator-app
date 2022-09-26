@@ -6,20 +6,37 @@ import { TipAmount } from "./TipAmount";
 import { TipSelect } from "./TipSelect";
 import { TotalAmount } from "./TotalAmount";
 import { useState } from "react";
-import { TotalAmountCalculator } from "./TipCalculatorFunctions";
-import { TipAmountCalculator } from "./TipCalculatorFunctions";
+
+function totalAmountCalculator({ bill, tipPercentage, peopleNumber }) {
+  const billWithTip = (
+    Number(bill) + Number((bill * parseFloat(tipPercentage)) / 100)
+  ).toFixed(2);
+  if (billWithTip / peopleNumber === Infinity) {
+    return "0.00";
+  } else {
+    return !tipPercentage || !bill || !peopleNumber
+      ? "0.00"
+      : (billWithTip / Number(peopleNumber)).toFixed(2);
+  }
+}
+
+function tipAmountCalculator({ bill, tipPercentage, peopleNumber }) {
+  const totalAmount = (
+    (bill * parseFloat(tipPercentage)) /
+    100 /
+    peopleNumber
+  ).toFixed(2);
+  if (!tipPercentage || !bill || !peopleNumber) {
+    return "0.00";
+  } else {
+    return totalAmount === "Infinity" ? "0.00" : totalAmount;
+  }
+}
 
 export function SplitterComponent() {
   const [bill, setBill] = useState("");
   const [tipPercentage, setTipPercentage] = useState("");
   const [peopleNumber, setPeopleNumber] = useState("");
-
-  const totalResult = TotalAmountCalculator({
-    bill,
-    tipPercentage,
-    peopleNumber,
-  });
-  const totalTip = TipAmountCalculator({ bill, tipPercentage, peopleNumber });
 
   const handleCancelCalculationInputs = () => {
     setBill("");
@@ -77,12 +94,18 @@ export function SplitterComponent() {
           justifyContent="space-around"
         >
           <TipAmount
-            total={totalTip}
+            total={tipAmountCalculator({ bill, tipPercentage, peopleNumber })}
             bill={bill}
             tipPercentage={tipPercentage}
             peopleNumber={peopleNumber}
           />
-          <TotalAmount total={totalResult} />
+          <TotalAmount
+            total={totalAmountCalculator({
+              bill,
+              tipPercentage,
+              peopleNumber,
+            })}
+          />
         </Box>
         <ResetButton
           bill={bill}
