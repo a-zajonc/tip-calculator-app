@@ -14,7 +14,6 @@ export function SplitterComponent() {
   const [tipPercentage, setTipPercentage] = useState("");
   const [peopleNumber, setPeopleNumber] = useState("");
 
-  console.log(bill);
   const totalResult = TotalAmountCalculator({
     bill,
     tipPercentage,
