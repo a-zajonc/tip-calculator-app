@@ -25,14 +25,17 @@ export function TotalAmount({ total }) {
         alignItems="center"
         justifyContent="flex-end"
       >
-        <Img src={greenDollar} alt="Dollar sign" height="30px" />
+        <Img
+          src={greenDollar}
+          alt="Dollar sign"
+          height={{ base: "20px", md: "30px", lg: "30px" }}
+        />
         <Text
-          fontSize={{
-            base: "26px",
-            md: resultDisplaySize(total),
-            lg: resultDisplaySize(total),
-          }}
           color="#20A291"
+          whiteSpace="nowrap"
+          overflow="hidden"
+          textOverflow="ellipsis"
+          fontSize={{ base: "30px", md: "45px", lg: "40px" }}
         >
           {!total ? "0.00" : total}
         </Text>
