@@ -1,6 +1,11 @@
 import { Button } from "@chakra-ui/react";
 
-export function ResetButton({ bill, tipPercentage, peopleNumber }) {
+export function ResetButton({
+  bill,
+  tipPercentage,
+  peopleNumber,
+  handleClick,
+}) {
   const buttonIsActive = bill || tipPercentage || peopleNumber ? false : true;
 
   const completedColor =
@@ -14,7 +19,7 @@ export function ResetButton({ bill, tipPercentage, peopleNumber }) {
       textTransform="uppercase"
       _hover={{ bgColor: "#9ee7de" }}
       isDisabled={buttonIsActive}
-      onClick={() => window.location.reload(false)}
+      onClick={handleClick}
     >
       Reset
     </Button>

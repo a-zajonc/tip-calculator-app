@@ -39,7 +39,7 @@ export function PeopleNumberInput({
         ) : null}
       </Box>
       <InputGroup>
-        <InputLeftElement pointerEvents="none" children={personSign} />
+        <InputLeftElement pointerEvents="none">{personSign}</InputLeftElement>
         <Input
           variant="filled"
           color="#00494D"
@@ -53,6 +53,8 @@ export function PeopleNumberInput({
           onChange={handleChange}
           isInvalid={!isError ? false : true}
           type="number"
+          value={peopleNumber}
+          min={1}
         />
       </InputGroup>
     </Box>

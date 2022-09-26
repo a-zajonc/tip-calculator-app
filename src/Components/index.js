@@ -14,12 +14,19 @@ export function SplitterComponent() {
   const [tipPercentage, setTipPercentage] = useState("");
   const [peopleNumber, setPeopleNumber] = useState("");
 
+  console.log(bill);
   const totalResult = TotalAmountCalculator({
     bill,
     tipPercentage,
     peopleNumber,
   });
   const totalTip = TipAmountCalculator({ bill, tipPercentage, peopleNumber });
+
+  const handleCancelCalculationInputs = () => {
+    setBill("");
+    setTipPercentage("");
+    setPeopleNumber("");
+  };
 
   return (
     <Box
@@ -41,7 +48,7 @@ export function SplitterComponent() {
         justifyContent="space-between"
         pb={{ base: "0", lg: "20px" }}
       >
-        <BillInput setBill={setBill} />
+        <BillInput setBill={setBill} bill={bill} />
         <TipSelect
           setTipPercentage={setTipPercentage}
           tipPercentage={tipPercentage}
@@ -82,6 +89,7 @@ export function SplitterComponent() {
           bill={bill}
           tipPercentage={tipPercentage}
           peopleNumber={peopleNumber}
+          handleClick={handleCancelCalculationInputs}
         />
       </Box>
     </Box>

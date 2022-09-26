@@ -77,6 +77,7 @@ export function TipSelect({ setTipPercentage, tipPercentage }) {
           _placeholder={{ color: "#7F9C9F" }}
           onChange={handleChange}
           type="number"
+          value={tipPercentage}
         />
       </Container>
     </Box>
