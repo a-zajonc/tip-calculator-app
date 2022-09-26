@@ -15,3 +15,5 @@ export const personSign = (
     />
   </svg>
 );
+
+export const greenDollar = require("../Images/icon-dollar-green.png");
