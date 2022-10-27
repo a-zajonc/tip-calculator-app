@@ -48,6 +48,7 @@ export function PeopleNumberInput({
           onChange={handleChange}
           isInvalid={!isError ? false : true}
           type="number"
+          inputMode="decimal"
           value={peopleNumber}
           min={1}
         />
