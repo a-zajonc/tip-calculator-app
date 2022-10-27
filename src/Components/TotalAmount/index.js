@@ -3,12 +3,7 @@ import greenDollar from "../Images/icon-dollar-green.png";
 
 export function TotalAmount({ total }) {
   return (
-    <Box
-      fontFamily="Space Mono"
-      display="flex"
-      flexDirection="row"
-      height="46px"
-    >
+    <Box display="flex" flexDirection="row" height="46px">
       <Box w="33%">
         <Text fontSize="15px" color="white">
           Total
