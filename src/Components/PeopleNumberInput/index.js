@@ -22,18 +22,13 @@ export function PeopleNumberInput({
     (tipPercentage && bill && !peopleNumber) || peopleNumber === "0";
 
   return (
-    <Box fontFamily="Space Mono">
+    <Box>
       <Box display="flex" flexDirection="row" justifyContent="space-between">
-        <Heading
-          fontFamily="Space Mono"
-          fontSize="14px"
-          color="#5E7A7D"
-          pb="10px"
-        >
+        <Heading fontSize="14px" color="#5E7A7D" pb="10px">
           Number of People
         </Heading>
         {isError === true ? (
-          <Text fontFamily="Space Mono" color="#b87b6a" fontSize="14px">
+          <Text color="#b87b6a" fontSize="14px">
             Can't be zero
           </Text>
         ) : null}

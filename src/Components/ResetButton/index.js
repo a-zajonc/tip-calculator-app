@@ -6,20 +6,16 @@ export function ResetButton({
   peopleNumber,
   handleClick,
 }) {
-  const buttonIsActive = bill || tipPercentage || peopleNumber ? false : true;
-
   const completedColor =
-    bill && tipPercentage && peopleNumber ? "#20A291" : "#f3f8fb";
+    bill && tipPercentage && peopleNumber ? "green" : "lightGray";
 
   return (
     <Button
-      fontFamily="Space Mono"
+      variant="primary"
       bgColor={completedColor}
-      width="100%"
-      textTransform="uppercase"
-      _hover={{ bgColor: "#9ee7de" }}
-      isDisabled={buttonIsActive}
+      isDisabled={bill || tipPercentage || peopleNumber ? false : true}
       onClick={handleClick}
+      _hover={{ bgColor: "cyanish" }}
     >
       Reset
     </Button>

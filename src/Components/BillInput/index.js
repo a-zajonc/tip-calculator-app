@@ -13,13 +13,8 @@ export function BillInput({ setBill, bill }) {
   };
 
   return (
-    <Box fontFamily="Space Mono">
-      <Heading
-        fontFamily="Space Mono"
-        fontSize="14px"
-        color="#5E7A7D"
-        pb="10px"
-      >
+    <Box>
+      <Heading fontSize="14px" pb="10px" color="#5E7A7D">
         Bill
       </Heading>
       <InputGroup>
@@ -37,6 +32,7 @@ export function BillInput({ setBill, bill }) {
           textAlign="end"
           onChange={handleChange}
           type="number"
+          inputMode="decimal"
           value={bill}
           min={1}
         />
